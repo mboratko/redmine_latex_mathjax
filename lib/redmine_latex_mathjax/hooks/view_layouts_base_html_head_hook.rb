@@ -47,7 +47,7 @@ module RedmineLatexMathjax
             "<script>
             $.noConflict();
             jQuery(document).ready(function($) {
-                $('#preview').contentChange(function() { MathJax.Hub.Typeset(); } );
+                $('#preview').contentChange(function() { try { MathJax.Hub.Typeset(); } catch(err) {}} );
             });
             </script>" 
       end
