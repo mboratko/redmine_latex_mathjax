@@ -1,5 +1,5 @@
 require 'redmine'
-RAILS_DEFAULT_LOGGER.info 'Redmine LaTeX MathJax'
+::Rails.logger.info 'Redmine LaTeX MathJax'
 
 Redmine::Plugin.register :redmine_latex_mathjax do
   name 'Redmine Latex MathJax'
