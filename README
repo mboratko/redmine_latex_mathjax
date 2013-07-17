@@ -5,7 +5,7 @@ Installation
 2.) If you downloaded the zipball (https://github.com/process91/redmine_latex_mathjax/zipball/master), rename the extracted directory to 'redmine_latex_mathjax'
 3.) Restart Redmine (e.g. by restarting Apache)
 
-Login to Redmine and go to Administration->Plugins. You should now see 'Redmine Latex MathJax'. Enjoy!
+Login to Redmine and go to Administration->Plugins. You should now see 'Redmine LaTeX MathJax'. Enjoy!
 
 
 ------------
