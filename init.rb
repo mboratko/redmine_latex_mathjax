@@ -2,7 +2,7 @@ require 'redmine'
 ::Rails.logger.info 'Redmine LaTeX MathJax'
 
 Redmine::Plugin.register :redmine_latex_mathjax do
-  name 'Redmine Latex MathJax'
+  name 'Redmine LaTeX MathJax'
   author 'Michael Boratko'
   description 'Employ MathJax in all settings: wiki, issues, or every page.'
   url ''
