@@ -15,7 +15,7 @@ module RedmineLatexMathjax
   });
           MathJax.Hub.Typeset();
           </script>" +
-            javascript_include_tag('https://d3eoax9i5htok0.cloudfront.net/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML') + 
+            javascript_include_tag('http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML') + 
             javascript_include_tag('https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js')+
             '<script>
   jQuery.fn.contentChange = function(callback){
