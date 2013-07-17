@@ -1,4 +1,7 @@
-------------
+Redmine LaTeX MathJax Plugin
+============================
+
+
 Installation
 ------------
 1.) Download archive and extract to /your/path/to/redmine/vendor/plugins/
@@ -8,7 +11,6 @@ Installation
 Login to Redmine and go to Administration->Plugins. You should now see 'Redmine LaTeX MathJax'. Enjoy!
 
 
-------------
 Usage
 ------------
 Anywhere on a wiki page write for inline formulas (inlineMath):
@@ -22,7 +24,6 @@ $$\sum_i x_i$$
 Hit 'Preview' or 'Save' to let them show up.
 
 
-------------
 FAQ
 ------------
 Q: Why do the formulas not show up in PDFs?
