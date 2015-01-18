@@ -4,7 +4,7 @@ Redmine LaTeX MathJax Plugin
 
 Installation
 ------------
-1. Download archive and extract to /your/path/to/redmine/vendor/plugins/
+1. Download archive and extract to `#{RAILS_ROOT}/plugins` (Redmine 2.x) or `#{RAILS_ROOT}/vendor/plugins` (Redmine 1.x).
 2. If you downloaded the zipball (https://github.com/process91/redmine_latex_mathjax/zipball/master), rename the extracted directory to 'redmine_latex_mathjax'
 3. Restart Redmine (e.g. by restarting Apache)
 
