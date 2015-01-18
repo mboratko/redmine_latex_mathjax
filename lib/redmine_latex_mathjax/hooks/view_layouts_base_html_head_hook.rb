@@ -16,7 +16,7 @@ module RedmineLatexMathjax
           MathJax.Hub.Typeset();
           </script>" +
             javascript_include_tag('https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML') +
-            javascript_include_tag('https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js')+
+            javascript_include_tag('https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')+
             '<script>
   jQuery.fn.contentChange = function(callback){
     var elms = jQuery(this);
