@@ -1,6 +1,6 @@
 Redmine LaTeX MathJax Plugin
 ============================
-
+This is a simple little plugin which allows mathematical notation to be used within Redmine.
 
 Installation
 ------------
@@ -8,12 +8,12 @@ Installation
 2. If you downloaded the zipball (https://github.com/process91/redmine_latex_mathjax/zipball/master), rename the extracted directory to 'redmine_latex_mathjax'
 3. Restart Redmine (e.g. by restarting Apache)
 
-Login to Redmine and go to Administration->Plugins. You should now see 'Redmine LaTeX MathJax'. Enjoy!
+Login to Redmine and go to Administration->Plugins. You should now see 'Redmine LaTeX MathJax', which indicates it is installed. Enjoy!
 
 
 Usage
 ------------
-Anywhere on a wiki page write for inline formulas (inlineMath):
+Anywhere on a wiki page (for example) write for inline formulas (inlineMath):
 
 $\sum_i x_i$
 
@@ -21,7 +21,7 @@ and for block type formulas (displayMath):
 
 $$\sum_i x_i$$
 
-Hit 'Preview' or 'Save' to let them show up.
+Hit 'Preview' or 'Save' to make the notation show up.
 
 
 FAQ
