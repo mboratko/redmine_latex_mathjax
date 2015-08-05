@@ -36,8 +36,10 @@ module RedmineLatexMathjax
     for( var x=0; x < a.length; x++ ) {
       if ( a[x].onclick ) {
         str = a[x].getAttribute(\"onclick\");
-        a[x].setAttribute(\"onclick\", str.replace(\"submitPreview\",\"MJsubmitPreview\"));
-        break;
+        if (str.indexOf(\"submitPreview\") === 0) {
+      	  a[x].setAttribute(\"onclick\", str.replace(\"submitPreview\",\"MJsubmitPreview\"));
+          break;
+      	};
       };  
 	};	
   });
