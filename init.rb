@@ -2,7 +2,7 @@ require 'redmine'
 ::Rails.logger.info 'Redmine LaTeX MathJax Macro'
 require File.dirname(__FILE__) + '/lib/redmine_latex_mathjax/hooks/view_layouts_base_html_head_hook'
 
-Redmine::Plugin.register :redmine_latex_mathjax do
+Redmine::Plugin.register :redmine_latex_mathjax_macro do
   name 'Redmine LaTeX MathJax Macro'
   author 'René van Dorst'
   description 'Employ MathJax in all settings: wiki, issues, or every page.'
