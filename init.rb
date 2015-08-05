@@ -18,7 +18,7 @@ Redmine::Plugin.register :redmine_latex_mathjax do
   end
 end
 
-class MatchJaxEmbedMacro
+class MathJaxEmbedMacro
   # Modify the delimiter.
   @@delimiter = '~~~'
   # Modify URL to MathJax.
