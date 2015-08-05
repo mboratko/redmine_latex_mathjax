@@ -7,7 +7,7 @@ module RedmineLatexMathjax
     extensions: ['tex2jax.js'],
     jax: ['input/TeX', 'output/HTML-CSS'],
     tex2jax: {
-  	  inlineMath: [ ['" + MachJaxEmbedMacro.delimiter.html_safe + "','" + MachJaxEmbedMacro.delimiter.html_safe + "'] ],
+  	  inlineMath: [ ['" + MathJaxEmbedMacro.delimiter.html_safe + "','" + MathJaxEmbedMacro.delimiter.html_safe + "'] ],
       displayMath: [ ],
       processEscapes: false,
       ignoreClass: 'text-diff'
@@ -16,7 +16,7 @@ module RedmineLatexMathjax
   });
           MathJax.Hub.Typeset();
           </script>" +
-            javascript_include_tag(MachJaxEmbedMacro.URLToMathJax + '?config=TeX-AMS-MML_HTMLorMML&delayStartupUntil=onload') +
+            javascript_include_tag(MathJaxEmbedMacro.URLToMathJax + '?config=TeX-AMS-MML_HTMLorMML&delayStartupUntil=onload') +
             "<script type=\"text/javascript\">
   // Own submitPreview script with Mathjax trigger. Copy & Paste of public/javascripts/application.js
   function MJsubmitPreview(url, form, target) {

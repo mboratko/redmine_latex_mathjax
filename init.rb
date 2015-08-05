@@ -13,7 +13,7 @@ Redmine::Plugin.register :redmine_latex_mathjax do
   Redmine::WikiFormatting::Macros.register do
     desc = "MathJax Macro: Usage: {{mj( MathJax Syntax )}}"
     macro :mj, :parse_args => false do |obj, args|
-      out = MatchJaxEmbedMacro.mj_macro(obj, args)
+      out = MathJaxEmbedMacro.mj_macro(obj, args)
     end
   end
 end
