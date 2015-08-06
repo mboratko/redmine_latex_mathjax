@@ -7,49 +7,43 @@ module RedmineLatexMathjax
     extensions: ['tex2jax.js'],
     jax: ['input/TeX', 'output/HTML-CSS'],
     tex2jax: {
-      inlineMath: [ ['$','$'] ],
-      displayMath: [ ['$$','$$'] ],
-      processEscapes: true
+  	  inlineMath: [ ['" + MathJaxEmbedMacro.delimiter.html_safe + "','" + MathJaxEmbedMacro.delimiter.html_safe + "'] ],
+      displayMath: [ ],
+      processEscapes: false,
+      ignoreClass: 'text-diff'
     },
     'HTML-CSS': { availableFonts: ['TeX'] }
   });
           MathJax.Hub.Typeset();
           </script>" +
-            javascript_include_tag('https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML') +
-            javascript_include_tag('https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')+
-            '<script>
-  jQuery.fn.contentChange = function(callback){
-    var elms = jQuery(this);
-    elms.each(
-      function(i){
-        var elm = jQuery(this);
-        elm.data("lastContents", elm.html());
-        window.watchContentChange = window.watchContentChange ? window.watchContentChange : [];
-        window.watchContentChange.push({"element": elm, "callback": callback});
-      }
-    )
-    return elms;
+            javascript_include_tag(MathJaxEmbedMacro.URLToMathJax + '?config=TeX-AMS-MML_HTMLorMML&delayStartupUntil=onload') +
+            "<script type=\"text/javascript\">
+  // Own submitPreview script with Mathjax trigger. Copy & Paste of public/javascripts/application.js
+  function MJsubmitPreview(url, form, target) {
+	$.ajax({
+  	  url: url,
+  	  type: 'post',
+  	  data: $('#'+form).serialize(),
+  	  success: function(data){
+    	$('#'+target).html(data);
+    	MathJax.Hub.Queue([\"Typeset\",MathJax.Hub,target]);
+  	  }
+	});
   }
-  setInterval(function(){
-    if(window.watchContentChange){
-      for( i in window.watchContentChange){
-        try {
-        if(window.watchContentChange[i].element.data("lastContents") != window.watchContentChange[i].element.html()){
-          window.watchContentChange[i].callback.apply(window.watchContentChange[i].element);
-          window.watchContentChange[i].element.data("lastContents", window.watchContentChange[i].element.html())
-        }
-        }
-        catch(err){}
-      }
-    }
-  },500);
-</script>' + 
-            "<script>
-            $.noConflict();
-            jQuery(document).ready(function($) {
-                $('#preview').contentChange(function() { try { MathJax.Hub.Typeset(); } catch(err) {}} );
-            });
-            </script>" 
+  // Replace function submitPreview with own version with a Mathjax trigger
+  document.addEventListener(\"DOMContentLoaded\", function() {
+	a = document.getElementsByTagName(\"a\");
+    for( var x=0; x < a.length; x++ ) {
+      if ( a[x].onclick ) {
+        str = a[x].getAttribute(\"onclick\");
+        if (str.indexOf(\"submitPreview\") === 0) {
+      	  a[x].setAttribute(\"onclick\", str.replace(\"submitPreview\",\"MJsubmitPreview\"));
+          break;
+      	};
+      };  
+	};	
+  });
+</script>"
       end
     end
   end
