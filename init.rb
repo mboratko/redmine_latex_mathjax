@@ -25,7 +25,11 @@ class MathJaxEmbedMacro
   @@url = 'https://cdn.mathjax.org/mathjax/latest/MathJax.js'
   def self.mj_macro(obj, arg)
     raise "Usage: {{mj( MathJax Syntax )}}" unless arg.length >= 1
-    out = "#@@delimiter #{arg} #@@delimiter".html_safe
+    if arg =~ /[<>]/
+	out = "<span id=\"errorExplanation\"><strong>MathJaxMacro:</strong> Illegal characters found! Don\'t using < or >.</span>".html_safe
+    else
+	out = "#@@delimiter #{arg} #@@delimiter".html_safe
+    end
   end
   def self.delimiter()
 	  return @@delimiter
