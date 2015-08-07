@@ -14,7 +14,7 @@ Redmine::Plugin.register :redmine_latex_mathjax_macro do
     desc "MathJax Macro:\n\n" +
 	    "Usage:\n"+ 
 	    "{{mj( single line MathJax Syntax )}}\n\n" +
-	    "{{mj\nMmulti line\nMathJax Syntax\n}}"
+	    "{{mj\nMulti line\nMathJax Syntax\n}}"
     macro :mj, :parse_args => false do |obj, args, text|
       out = MathJaxEmbedMacro.mj_macro(obj, args, text)
     end
