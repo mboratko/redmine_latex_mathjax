@@ -1,6 +1,10 @@
-Redmine LaTeX MathJax Plugin
-============================
+Redmine LaTeX MathJax Macro Plugin
+==================================
 
+Requirements
+------------
+
+Redmine 3.0.x or 3.1.x.
 
 Installation
 ------------
@@ -13,12 +17,20 @@ Login to Redmine and go to Administration->Plugins. You should now see 'Redmine 
 
 Usage
 ------------
-Anywhere on a wiki page write for inline formulas:
+Anywhere on a wiki or issue page write for formulas:
 
 {{mj(\sum_i x_i$)}}
 
-Hit 'Preview' or 'Save' to let them show up.
+or a multiline MathJax Syntax:
 
+{{mj
+P_{POWER} =
+\cfrac
+{U_{POWER}}
+{I_{POWER}}
+}}
+
+Hit 'Preview' or 'Save' to let them show up.
 
 FAQ
 ------------
