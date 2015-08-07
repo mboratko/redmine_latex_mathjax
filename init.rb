@@ -8,7 +8,7 @@ Redmine::Plugin.register :redmine_latex_mathjax_macro do
   description 'Employ MathJax in all settings: wiki, issues, or every page.'
   url 'https://github.com/vDorst/redmine_latex_mathjax'
   author_url 'https://github.com/vDorst'
-  version '0.2.0'
+  version '0.3.0'
 
   Redmine::WikiFormatting::Macros.register do
     desc = "MathJax Macro: Usage: {{mj( MathJax Syntax )}}"
