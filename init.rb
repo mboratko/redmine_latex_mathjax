@@ -22,8 +22,9 @@ Redmine::Plugin.register :redmine_latex_mathjax_macro do
 end
 
 class MathJaxEmbedMacro
-  # Modify the delimiter.
-  @@delimiter = '~~~'
+  # Modify the delimiters.
+  @@inline_delimiter = '$'
+  @@display_delimiter = '$$'
   # Modify URL to MathJax.
   @@url = 'https://cdn.mathjax.org/mathjax/latest/MathJax.js'
   def self.mj_error(text)
@@ -52,8 +53,11 @@ class MathJaxEmbedMacro
     end
     return "#@@delimiter #{arg} #@@delimiter".html_safe
   end
-  def self.delimiter()
-	  return @@delimiter
+  def self.inline_delimiter()
+	  return @@inline_delimiter
+  end
+  def self.display_delimiter()
+	  return @@display_delimiter
   end
   def self.URLToMathJax()
 	  return @@url

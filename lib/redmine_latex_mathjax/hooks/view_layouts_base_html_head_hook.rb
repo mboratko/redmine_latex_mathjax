@@ -7,8 +7,8 @@ module RedmineLatexMathjax
     extensions: ['tex2jax.js'],
     jax: ['input/TeX', 'output/HTML-CSS'],
     tex2jax: {
-  	  inlineMath: [ ['" + MathJaxEmbedMacro.delimiter.html_safe + "','" + MathJaxEmbedMacro.delimiter.html_safe + "'] ],
-      displayMath: [ ],
+      inlineMath: [ ['" + MathJaxEmbedMacro.inline_delimiter.html_safe + "','" + MathJaxEmbedMacro.inline_delimiter.html_safe + "'] ],
+      displayMath: [ ['" + MathJaxEmbedMacro.display_delimiter.html_safe + "','" + MathJaxEmbedMacro.display_delimiter.html_safe + "'] ],
       processEscapes: false,
       ignoreClass: 'text-diff'
     },
