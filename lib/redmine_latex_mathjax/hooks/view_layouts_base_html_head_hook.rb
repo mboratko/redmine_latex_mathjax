@@ -3,21 +3,23 @@ module RedmineLatexMathjax
     class ViewLayoutsBaseHtmlHeadHook < Redmine::Hook::ViewListener
       def view_layouts_base_html_head(context={})
           return "<script type=\"text/x-mathjax-config\">
-          MathJax.Hub.Config({
+  MathJax.Hub.Config({
     extensions: ['tex2jax.js'],
     jax: ['input/TeX', 'output/HTML-CSS'],
     tex2jax: {
-  	  inlineMath: [ ['" + MathJaxEmbedMacro.delimiter.html_safe + "','" + MathJaxEmbedMacro.delimiter.html_safe + "'] ],
-      displayMath: [ ],
+      inlineMath: [ ['" + MathJaxEmbedMacro.delimiterStartInline.html_safe + "','" + MathJaxEmbedMacro.delimiterEndInline.html_safe + "'] ],
+      displayMath: [ ['" + MathJaxEmbedMacro.delimiterStartBlock.html_safe + "','" + MathJaxEmbedMacro.delimiterEndBlock.html_safe + "'] ],
       processEscapes: false,
       ignoreClass: 'text-diff'
     },
-    'HTML-CSS': { availableFonts: ['TeX'] }
+    'HTML-CSS': {
+	" + Setting.plugin_redmine_latex_mathjax_macro['latex_mathjax_html_css_config'] + "
+    }
   });
-          MathJax.Hub.Typeset();
-          </script>" +
-            javascript_include_tag(MathJaxEmbedMacro.URLToMathJax + '?config=TeX-AMS-MML_HTMLorMML&delayStartupUntil=onload') +
-            "<script type=\"text/javascript\">
+  MathJax.Hub.Typeset();
+</script>\n" +
+            javascript_include_tag(MathJaxEmbedMacro.URLToMathJax + '?config=TeX-AMS-MML_HTMLorMML&delayStartupUntil=onload') + "
+<script type=\"text/javascript\">
   // Own submitPreview script with Mathjax trigger. Copy & Paste of public/javascripts/application.js
   function MJsubmitPreview(url, form, target) {
 	$.ajax({
