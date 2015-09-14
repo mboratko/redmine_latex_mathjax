@@ -1,0 +1,30 @@
+<fieldset>
+
+<legend><%= l(:redmine_latex_mathjax_config_title) %></legend>
+
+<p><label><%= l(:redmine_latex_mathjax_label_url) %>:</label>
+<%= text_field_tag 'settings[latex_mathjax_url]', @settings['latex_mathjax_url'] %><br />
+</p>
+
+<p><label><%= l(:redmine_latex_mathjax_label_inline_delimiter_start) %>:</label>
+<%= text_field_tag 'settings[latex_mathjax_inline_delimiter_start]', @settings['latex_mathjax_inline_delimiter_start'] %><br />
+</p>
+
+<p><label><%= l(:redmine_latex_mathjax_label_inline_delimiter_end) %>:</label>
+<%= text_field_tag 'settings[latex_mathjax_inline_delimiter_end]', @settings['latex_mathjax_inline_delimiter_end'] %><br />
+</p>
+
+<p><label><%= l(:redmine_latex_mathjax_label_block_delimiter_start) %>:</label>
+<%= text_field_tag 'settings[latex_mathjax_block_delimiter_start]', @settings['latex_mathjax_block_delimiter_start'] %><br />
+</p>
+
+<p><label><%= l(:redmine_latex_mathjax_label_block_delimiter_end) %>:</label>
+<%= text_field_tag 'settings[latex_mathjax_block_delimiter_end]', @settings['latex_mathjax_block_delimiter_end'] %><br />
+</p>
+
+
+<p><label><%= l(:redmine_latex_mathjax_label_html_css_config) %>:</label>
+<%= text_area_tag 'settings[latex_mathjax_html_css_config]', @settings['latex_mathjax_html_css_config'] %><br />
+</p>
+
+</fieldset>
