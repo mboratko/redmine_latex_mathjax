@@ -4,9 +4,9 @@ require File.dirname(__FILE__) + '/lib/redmine_latex_mathjax/hooks/view_layouts_
 
 Redmine::Plugin.register :redmine_latex_mathjax_macro do
   name 'Redmine LaTeX MathJax Macro'
-  author 'René van Dorst'
+  author 'RVD'
   description 'Employ MathJax in all settings: wiki, issues, or every page.'
-  url 'https://github.com/vDorst/redmine_latex_mathjax'
+  url 'https://github.com/process91/redmine_latex_mathjax'
   author_url 'https://github.com/vDorst'
   version '0.3.0'
 
