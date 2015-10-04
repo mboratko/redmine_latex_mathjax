@@ -12,7 +12,7 @@ Other version are not tested but may work.
 Installation
 ------------
 1. Download archive and extract to /your/path/to/redmine/plugins/
-2. If you downloaded the zipball (https://github.com/vDorst/redmine_latex_mathjax/zipball/master), rename the extracted directory to 'redmine_latex_mathjax'
+2. If you downloaded the zipball (https://github.com/process91/redmine_latex_mathjax/archive/master.zip), rename the extracted directory to 'redmine_latex_mathjax'
 3. (Optional) Modify init.rb. For example if you host MathJax yourself. You can point to your own MathJax location.
 4. Restart Redmine (e.g. by restarting Apache)
 
