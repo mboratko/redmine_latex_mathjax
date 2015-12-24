@@ -1,3 +1,5 @@
-<%= render :parent  %>
+<fieldset class="preview"><legend><%= l(:label_preview) %></legend>
+<%= textilizable @text, :attachments => @attachments, :object => @previewed %>
+</fieldset>
 <script type="text/javascript"> MathJax.Hub.Queue(["Typeset",MathJax.Hub,"#preview"]);</script>
 
