@@ -58,22 +58,22 @@ class MathJaxEmbedMacro
   end
 
   def self.delimiterStartInline()
-	  return Setting.plugin_redmine_latex_mathjax_macro['latex_mathjax_inline_delimiter_start'] || ""
+	  return Setting.plugin_redmine_latex_mathjax['latex_mathjax_inline_delimiter_start'] || ""
   end
 
   def self.delimiterEndInline()
-	  return Setting.plugin_redmine_latex_mathjax_macro['latex_mathjax_inline_delimiter_end'] || ""
+	  return Setting.plugin_redmine_latex_mathjax['latex_mathjax_inline_delimiter_end'] || ""
   end
 
   def self.delimiterStartBlock()
-	  return Setting.plugin_redmine_latex_mathjax_macro['latex_mathjax_block_delimiter_start'] || ""
+	  return Setting.plugin_redmine_latex_mathjax['latex_mathjax_block_delimiter_start'] || ""
   end
 
   def self.delimiterEndBlock()
-	  return Setting.plugin_redmine_latex_mathjax_macro['latex_mathjax_block_delimiter_start'] || ""
+	  return Setting.plugin_redmine_latex_mathjax['latex_mathjax_block_delimiter_start'] || ""
   end
 
   def self.URLToMathJax()
-	  return Setting.plugin_redmine_latex_mathjax_macro['latex_mathjax_url'] || ""
+	  return Setting.plugin_redmine_latex_mathjax['latex_mathjax_url'] || ""
   end
 end
