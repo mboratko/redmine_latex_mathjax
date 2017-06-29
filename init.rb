@@ -11,7 +11,7 @@ Redmine::Plugin.register :redmine_latex_mathjax_macro do
   version '0.3.0'
 
   settings :default => {
-    'latex_mathjax_url' => 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
+    'latex_mathjax_url' => 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js',
     'latex_mathjax_inline_delimiter_start' => '$',
     'latex_mathjax_inline_delimiter_end' => '$',
     'latex_mathjax_block_delimiter_start' => '$$',
