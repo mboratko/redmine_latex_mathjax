@@ -22,16 +22,16 @@ Usage
 ------------
 Anywhere on a wiki or issue page write for formulas:
 
-{{mj(\sum_i x_i$)}}
+$mj(\sum_i x_i)$
 
 or a multiline MathJax Syntax:
 
-{{mj
+{{mj(
 P_{POWER} =
 \cfrac
 {U_{POWER}}
 {I_{POWER}}
-}}
+)}}
 
 Hit 'Preview' or 'Save' to let them show up.
 
