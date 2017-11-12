@@ -13,7 +13,7 @@ module RedmineLatexMathjax
       ignoreClass: 'text-diff'
     },
     'HTML-CSS': {
-	" + Setting.plugin_redmine_latex_mathjax_macro['latex_mathjax_html_css_config'] + "
+	" + Setting.plugin_redmine_latex_mathjax['latex_mathjax_html_css_config'] + "
     }
   });
   MathJax.Hub.Typeset();
